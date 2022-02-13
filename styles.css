@@ -1,15 +1,25 @@
-#box{
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+#circle{
     position: absolute;
-    left: 25vw;
-    top: 25vh;
-    width: 50vw;
-    height: 50vh;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 200px;
+    height: 200px;
     background-color: rgba(189, 22, 22, 0.5);
+    border-radius: 50%;
+    font-size: 3vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    font-size: 10vw;
+    align-items: center;
     user-select: none;
 }
 
@@ -17,4 +27,28 @@ h1{
     text-align: center;
     font-size: 3vw;
     color: red;
+    user-select: none;
+}
+
+@media (max-width: 750px){
+    #circle{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (min-width: 1200px){
+    #circle{
+        font-size: 2vw;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 2000px){
+    #circle{
+        font-size: 1vw;
+        width: 350px;
+        height: 350px;
+    }
 }
